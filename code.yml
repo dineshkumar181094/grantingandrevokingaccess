@@ -1,0 +1,16 @@
+---
+ - name: Granting and revoking ssh access to new developer
+   hosts: servergroup
+
+   tasks:
+    - name: granting ssh access to a new user on all server groups
+      user:
+        name: "{{developeruid}}"
+        generate_ssh_key: yes
+    # this will generate a public key throug which user can login to server
+
+    - name: revoking access
+      user:
+       name: "{{developerid}}"
+       state: absent
+       remove: yes
