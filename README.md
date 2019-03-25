@@ -1,6 +1,8 @@
 # grantingandrevokingaccess
 
 groups of server shoud be mentioned in inventory files
+
+
 example
 [servergroup]
 sererip   ansible_user=username ansible_ssh_pass=password
