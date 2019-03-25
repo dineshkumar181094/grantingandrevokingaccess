@@ -8,7 +8,7 @@ example
 sererip   ansible_user=username ansible_ssh_pass=password
  
 use command
-ansible-playbook code.yml -i inventory -vvvv
+ansible-playbook code.yml -i inventory --extra-vars "developerid='myid'"-vvvv
 
 copy "ssh_public_key" key value and give to developer
 
