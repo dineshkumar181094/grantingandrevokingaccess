@@ -6,6 +6,7 @@
     - name: granting ssh access to a new user on all server groups
       user:
         name: "{{developeruid}}"
+        password: "{{ 'P@ssw0rd' | password_hash('sha512') }}"
         generate_ssh_key: yes
     # this will generate a public key throug which user can login to server
 
